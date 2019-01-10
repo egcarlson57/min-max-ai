@@ -1,0 +1,37 @@
+Erik Carlson, ZhaoBin Li
+CS111
+Final Project Proposal
+
+Topic: Computer with intelligence
+
+Game: Connect 4
+
+Interface library: graphics.py
+
+Class:
+    • Pieces
+        ◦ Location (x,y)
+        ◦ Color (string)
+    • Board
+        ◦ Size (x,y) - 6x7
+        ◦ Where the pieces are (using matrix)
+    • Game
+        ◦ Human, AI playing options (both)
+        ◦ Win/Lose result determination (PNMA)
+        ◦ Interface with graphics.py
+
+AI strategies
+    • Value Heuristic to evaluate which possible moves among the 7 should be played
+        ◦ For every move, pretend the move has been played and use PNMA
+    • Tree search
+        ◦ Recurse through the Value Heuristics to determine the best move
+
+Prime number masking algorithm (PNMA):
+    • Use prime number mask to –
+    • Determine in a board state and assign a score
+        ◦ Length of connections (the greater the better)
+        ◦ Number of connections (the greater the better)
+    • Additional considerations
+        ◦ Spaces around connections (the greater the better)
+        ◦ Edge cases where you can’t win (minimize edge cases)
+        ◦ Gap cases which may result in a connection (the greater the better)
